@@ -1,0 +1,13 @@
+manisfest_name : cache.appcache
+domain : http://localhost:9876/
+pages:
+  - "#/1"
+  - "#/2"
+resources:
+  realPath: "/media/pter/SSD-SOMCOM/oblady/deceuninck-appbrisevue-preview/app/"
+  finalPath : ""
+  paths:
+    - images
+
+sql:
+  - "SELECT * FROM table"

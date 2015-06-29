@@ -1,0 +1,10 @@
+{
+    "name": "my-vendor/manifestGenerator",
+    "bin": ["bin/simple_html_dom.php"],
+    "config": {
+      "bin-dir": "./"
+    },
+    "require": {
+        "symfony/finder": "^2.7"
+    }
+}
