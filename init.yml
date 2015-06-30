@@ -1,4 +1,5 @@
 manifest_name : cache.appcache
+manifest_path : /media/pter/SSD-SOMCOM/oblady/deceuninck-appbrisevue-preview/
 domain : http://localhost:9876/
 pages:
   - "#/1"

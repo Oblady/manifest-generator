@@ -142,5 +142,5 @@
 		$cacheManifest->sqlObj->add($sql);
 	}
 	$cacheManifest->generate();
-	file_put_contents($array["manifest_name"],$cacheManifest->getFile());
+	file_put_contents($array["manifest_path"].$array["manifest_name"],$cacheManifest->getFile());
 ?>
