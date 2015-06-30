@@ -21,7 +21,7 @@ Il faut déclarer un fichier init.yml afin de connaître l'url du cache à gén�
 Utilisation de Manifest Generator
 *********************************
 
-Contruction du fichier init.yml::
+Construction du fichier init.yml::
 
     manisfest_name : cache.appcache
     domain : http://localhost:9876/

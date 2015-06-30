@@ -1,8 +1,10 @@
-manisfest_name : cache.appcache
+manifest_name : cache.appcache
 domain : http://localhost:9876/
 pages:
   - "#/1"
   - "#/2"
+  - "#/3"
+  - "#/4"
 resources:
   realPath: "/media/pter/SSD-SOMCOM/oblady/deceuninck-appbrisevue-preview/app/"
   finalPath : ""

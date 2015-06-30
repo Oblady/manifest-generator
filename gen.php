@@ -1,11 +1,11 @@
 <?php
     require_once('vendor/autoload.php');
     //namespace Oblady;
-	include("./simple_html_dom.php");
+	include("./vendor/bin/simple_html_dom.php");
 	include('./spyc-0.5/spyc.php');
 
     use Symfony\Component\Finder\Finder;
-	$array = Spyc::YAMLLoad('./init.yml');
+
 
 
 
@@ -37,6 +37,9 @@
 		private function addLine($line) {
 			$this->cacheManifest .= $line.PHP_EOL;
 		}
+        private function addBlankLine() {
+            $this->cacheManifest .= PHP_EOL;
+        }
 		
 		
 		
@@ -53,20 +56,22 @@
 			}
 			
 			$this->addCommentLine('Static resources');
-			
-			foreach ($this->cssObj as $obj) {
-				var_dump($obj);
-				$this->addLine($obj->getData());
+			foreach ($this->cssObj->getData() as $obj) {
+				$this->addLine($obj);
 			}
+
+            foreach ($this->scriptObj->getData() as $obj) {
+                $this->addLine($obj);
+            }
 
             $this->addCommentLine('Uploaded files');
 
             //var_dump($this->files);die;
-            $temp = $this->files;
             foreach ($this->files->getData() as $uploadedFile) {
                 $this->addLine($uploadedFile);
             }
 
+            $this->addBlankLine();
 			$this->addLine('NETWORK:');
 			$this->addLine('*');
 		}
@@ -83,18 +88,31 @@
 		
 		
 		public function add($inData) {
-			if (!array_search($inData,$this->data)) {
-				$this->data[]=$inData;
-			}
+            var_dump($this->data);
+            $exist = false;
+            foreach ($this->data as $data) {
+                if ($inData == $data) {
+                    //echo $inData."\n";
+                    $exist=true;
+                    break;
+                }
+            }
+            if (!$exist) {
+                $this->data[]=$inData;
+            }
 		}
+
 		public function getData(){
 			return $this->data;
 		}
 	}
 
+/**
+ * Début du moteur
+ */
+
 	$cacheManifest = new cacheManifest();
-
-
+    $array = Spyc::YAMLLoad('./init.yml');
 
 	foreach ($array['pages'] as $page) {
 		$html = file_get_html($array['domain'].$page);
@@ -124,5 +142,5 @@
 		$cacheManifest->sqlObj->add($sql);
 	}
 	$cacheManifest->generate();
-	var_dump($cacheManifest->getFile());
+	file_put_contents($array["manifest_name"],$cacheManifest->getFile());
 ?>
