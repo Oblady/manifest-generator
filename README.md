@@ -1,4 +1,4 @@
-# manifest-generator
+# MANIFEST-GENERATOR
 
 ## Principes
 
@@ -29,11 +29,11 @@ Il faut déclarer un fichier init.yml afin de connaître l'url du cache à gén�
 * **pages** : Liste l'ensemnble des pages à mettre en cache
 * **resources** : Ce sont les images à mettre en cache. L'outil utilise finder de Symfony pour balayer les répertoires
 
-## Documentation symfony de finder
+## Documentation Symfony de finder
 
 [symfony finder documentation](http://symfony.com/doc/current/components/finder.html)
 
-## modification du "layout"
+## Modification du "layout"
 
 Le fichier manifeste doit être déposé à la racine du site;
 
