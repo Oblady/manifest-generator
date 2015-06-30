@@ -35,6 +35,7 @@ Il faut déclarer un fichier init.yml afin de connaître l'url du cache à gén�
 
 Le fichier manifeste doit être déposé à la racine du site;
 
+```html
     <!DOCTYPE html>
     <html lang="en" ng-app="deceuninck-preview" manifest="cache.appcache">
     <head>
@@ -43,4 +44,4 @@ Le fichier manifeste doit être déposé à la racine du site;
         <link href="build/components/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet" />
         <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
         <link href="css/slick.css
-
+```
