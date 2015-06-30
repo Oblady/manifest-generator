@@ -7,6 +7,7 @@ Il faut déclarer un fichier init.yml afin de connaître l'url du cache à gén�
 
 ## Construction du fichier init.yml
 
+```yaml
     manisfest_name : cache.appcache
     manifest_path : /media/pter/SSD-SOMCOM/oblady/deceuninck-appbrisevue-preview/
     domain : http://localhost:9876/
@@ -20,6 +21,7 @@ Il faut déclarer un fichier init.yml afin de connaître l'url du cache à gén�
         - images
     sql:
       - "SELECT * FROM table"
+```
 
 * **manifest_name** : Indique le nom de fichier du manifest. En règle générale cache.appcache
 * **manifest_path** : Indique le chemin ou doit être déposé le manifest. Finir avec /.
