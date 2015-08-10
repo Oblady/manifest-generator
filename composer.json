@@ -1,7 +1,6 @@
 {
     "name": "oblady/manifest-generator",
     "type": "library",
-    "bin": ["bin/simple_html_dom.php"],
     "authors": [
       {
         "name": "Ph TERRAILLON",
@@ -9,9 +8,6 @@
         "role": "Developer"
       }
     ],
-    "config": {
-      "bin-dir": "./"
-    },
     "require": {
         "symfony/finder": "^2.7"
     }
