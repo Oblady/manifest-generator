@@ -13,9 +13,6 @@
     ],
     "require": {
         "symfony/finder": "^2.7"
-    },
-    "autoload": {
-      "psr-0": { "": "" }
     }
 
 }
