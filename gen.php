@@ -1,5 +1,6 @@
 <?php
     require_once('vendor/autoload.php');
+    //pter
     //namespace Oblady;
 	include("./vendor/bin/simple_html_dom.php");
 	include('./spyc-0.5/spyc.php');
