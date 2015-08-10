@@ -1,6 +1,9 @@
 {
     "name": "oblady/manifest-generator",
     "type": "library",
+    "config":   {
+      "vendor-dir": "vendor"
+    },
     "authors": [
       {
         "name": "Ph TERRAILLON",
