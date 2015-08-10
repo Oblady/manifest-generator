@@ -1,13 +1,19 @@
-manisfest_name : cache.appcache
-domain : http://localhost:9876/
+#Nom du fichier manifest
+manifest_name : cache.appcache
+#Destination du fichier manifest
+manifest_path : /media/pter/SSD-SOMCOM/oblady/deceuninck-appbrisevue-preview/app
+domain : http://preview.brisevue.deceuninck.dev.oblady.com/
 pages:
   - "#/1"
   - "#/2"
+  - "#/3"
+  - "#/4"
 resources:
   realPath: "/media/pter/SSD-SOMCOM/oblady/deceuninck-appbrisevue-preview/app/"
   finalPath : ""
   paths:
     - images
+    - css/img
 
 sql:
   - "SELECT * FROM table"
