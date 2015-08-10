@@ -1,5 +1,5 @@
 {
-    "name": "pter/manifest-generator",
+    "name": "oblady/manifest-generator",
     "type": "library",
     "bin": ["bin/simple_html_dom.php"],
     "authors": [
