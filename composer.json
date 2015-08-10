@@ -1,5 +1,5 @@
 {
-    "name": "oblady/manifestGenerator",
+    "name": "pter/manifestGenerator",
     "bin": ["bin/simple_html_dom.php"],
     "config": {
       "bin-dir": "./"
