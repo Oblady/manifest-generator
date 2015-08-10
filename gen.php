@@ -4,7 +4,7 @@
 	include("vendor/bin/simple_html_dom.php");
 	include('spyc-0.5/spyc.php');
 
-    use Symfony\Component\Finder\Finder;
+    use Symfony\Finder\Finder;
 
 
 
