@@ -1,5 +1,5 @@
 {
-    "name": "pter/manifestGenerator",
+    "name": "pter/manifest-generator",
     "bin": ["bin/simple_html_dom.php"],
     "config": {
       "bin-dir": "./"
