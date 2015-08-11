@@ -121,7 +121,9 @@
 
     if (!array_key_exists(1,$argv)) die("\033[31;1;5mPas de ficher init.yml\033[0m\n");
 	$cacheManifest = new cacheManifest();
+    if (!file_exists('./'.$argv[1].'.yml')) die("\033[31;1;5mLe fichier d'init  ./".$argv[1].".yml inconnu\033[0m\n");
     $array = Spyc::YAMLLoad('./'.$argv[1].'.yml');
+
     $cacheManifest->realPath = $array["resources"]["realPath"];
 	foreach ($array['pages'] as $page) {
 		$html = file_get_html($array['domain'].$page);

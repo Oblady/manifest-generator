@@ -1,7 +1,5 @@
 {
     "name": "oblady/manifest-generator",
-    "type": "library",
-
     "authors": [
       {
         "name": "Ph TERRAILLON",
