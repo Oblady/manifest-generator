@@ -2,12 +2,30 @@
 manifest_name : cache.appcache
 #Destination du fichier manifest
 manifest_path : /media/pter/SSD-SOMCOM/oblady/deceuninck-appbrisevue-preview/app
-domain : http://preview.brisevue.deceuninck.dev.oblady.com/
+#domain : http://preview.brisevue.deceuninck.dev.oblady.com/
+domain : "http://127.0.0.1:9876/"
 pages:
   - "#/1"
   - "#/2"
   - "#/3"
   - "#/4"
+api:
+  item1 :
+    url: "http://deceuninck.dev.oblady.com/api/produits"
+    field: id
+    subUrl :"http://deceuninck.dev.oblady.com/api/produits/"
+    subUrlImages:"http://deceuninck.dev.oblady.com/uploads/images/"
+    subFields:
+      -imageFaceA
+      -imageFaceB
+      -imageFaceAB
+
+  item2:
+    url: "http://deceuninck.dev.oblady.com/api/produits/poteaux"
+  item3:
+    url: "http://deceuninck.dev.oblady.com/api/produits/lames"
+
+
 resources:
   realPath: "/media/pter/SSD-SOMCOM/oblady/deceuninck-appbrisevue-preview/app/"
   finalPath : ""
@@ -15,5 +33,4 @@ resources:
     - images
     - css/img
 
-sql:
-  - "SELECT * FROM table"
+
